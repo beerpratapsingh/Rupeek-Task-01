@@ -1,0 +1,45 @@
+footer{
+  width: 100%;  
+  background: rgba(0, 0, 0, .1);
+  position: absolute;
+  bottom: 0;
+  z-index: -9;
+  .inner-content{
+    .quote{
+      display: none;
+    }
+    .bank-logos{
+      width: 50%;
+      min-height: 10vh;
+      display: flex;
+      align-items: center;
+      a {
+        max-width: 16rem;
+        margin: 1rem 0;
+        &+a {
+          margin-left: 2rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  footer{
+    background: #fff;
+    position: relative;
+    .inner-content{
+      .quote {
+        width: 55%;
+        margin: 0 auto;
+        display: block;
+        text-align: center;
+      }
+      .bank-logos{
+        width: 100%;
+        padding-top: 2rem;
+        justify-content: center;
+      }
+    }
+  }
+}

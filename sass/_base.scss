@@ -1,0 +1,96 @@
+//Reset css
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img{
+  max-width: 100%;
+  width: auto;
+}
+
+a{
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+//Base css
+$font-stack: Arial, Helvetica, sans-serif;
+
+$primary-color: #690000;
+$secondary-color: #0A0B5B;
+$white: #fff;
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  color: $primary-color;
+  font-family: $font-stack;
+  font-size: 1.6rem;  
+  position: relative;
+  z-index: 9;
+}
+
+h1{
+  color: #c35f07;
+  font-size: 4.8rem;
+}
+
+h3{
+  font-size: 3.6rem;
+}
+
+.inpt {
+  width: 100%;
+  background: #fff;
+  padding: 1.7rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: .5rem;
+}
+
+.btn {
+  width: 100%;
+  color: #fff;
+  font-size: 1.8rem;
+  background-image: linear-gradient(#FF9800, #c35f07);
+  border: none;
+  padding: 1.5rem 1rem;
+  border-radius: 3rem;
+  box-shadow: 1px 3px 5px #615e5e;
+  text-transform: uppercase;
+  outline: none;
+  cursor: pointer;
+}
+
+.inner-content{
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+@media screen and (max-width: 1023px) {
+  h1 {
+    font-size: 3.6rem;
+  }
+  h3 {
+    font-size: 2.8rem;
+  }
+}
+
+@media screen and (max-width: 767px) {  
+  h1 {
+    color: #c35f07;
+    font-size: 3.2rem;
+  }
+
+  h3 {
+    font-size: 2.4rem;
+  }
+}

@@ -1,0 +1,71 @@
+%flex-align-center {
+  display: flex;
+  align-items: center;
+}
+
+.header-container{
+  background-image: linear-gradient(45deg, #c35f07, #FF9800);
+  padding: 2rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+
+  .inner-content{
+    display: flex;
+    justify-content: space-between;
+
+    .logo-sec , .lan-sec{
+      @extend %flex-align-center;
+    }
+    .logo-sec{
+     .bank-title{
+       border-left: 2px solid $white;
+       margin-left: 1.5rem;
+       padding-left: 1.5rem;
+     }
+    }
+    .lan-sec{
+      li{
+        border: 1px solid $white; 
+        border-radius: .3rem;
+        a{
+          color: $white;
+          display: inline-block;
+          padding: .7rem 1rem;
+        }
+        &:hover{
+          background: $white;
+          a{
+            color: $primary-color;
+          }
+        }
+        &:first-child{
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+        }
+        &+li{
+          border-left: 0;
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header-container {
+    .inner-content{
+      .lan-sec {
+        margin-left: 1rem;
+        li {
+          border: 1px solid $white;
+          border-radius: .3rem !important;
+          &+li {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
